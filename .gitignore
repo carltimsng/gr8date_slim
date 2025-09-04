@@ -38,3 +38,5 @@ media/
 .DS_Store
 .vscode/
 .idea/
+!seed_media/
+!seed_media/**
