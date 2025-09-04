@@ -27,3 +27,14 @@ build/
 *.tar.gz
 *.tgz
 *.bak
+
+__pycache__/
+*.pyc
+.env
+.env.*
+*.sqlite3
+db.sqlite3
+media/
+.DS_Store
+.vscode/
+.idea/
