@@ -8,15 +8,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = os.getenv("DEBUG", "1") == "1"
 SECRET_KEY = os.getenv("SECRET_KEY", "dev-secret-key-please-change")
 
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "*").split(",")
+ALLOWED_HOSTS = os.getenv(
+    "ALLOWED_HOSTS",
+    "127.0.0.1,localhost,gr8date.com.au,www.gr8date.com.au,web-production-29e6.up.railway.app"
+).split(",")
+
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.up.railway.app",
-    "https://localhost",
-    "http://localhost",
-    "http://127.0.0.1",
-    "https://127.0.0.1",
+    "https://gr8date.com.au",
+    "https://www.gr8date.com.au",
+    "https://web-production-29e6.up.railway.app",
 ]
+
 
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
